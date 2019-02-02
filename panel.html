@@ -52,28 +52,46 @@ footer {
     function onFirstClick() {
         firstclicks += 1;
         document.getElementById("First").innerHTML = firstclicks;
+        CheckAnswer();
     };
-    </script>
-	<script type="text/javascript">
     var secondclicks = 0;
     function onSecondClick() {
         secondclicks += 1;
         document.getElementById("Second").innerHTML = secondclicks;
+        CheckAnswer();
     };
-    </script>
-    <script type="text/javascript">
+ 
     var thirdclicks = 0;
         function onThirdClick() {
             thirdclicks += 1;
             document.getElementById("Third").innerHTML = thirdclicks;
+            CheckAnswer();
     };
-    </script>
-    <script type="text/javascript">
     var fourthclicks = 0;
         function onFourthClick() {
             fourthclicks += 1;
             document.getElementById("Fourth").innerHTML = fourthclicks;
+            CheckAnswer();
     };
+    function CheckAnswer(){
+        var Answer = "";
+        if(Math.max(firstclicks, secondclicks, thirdclicks, fourthclicks) == firstclicks){
+            Answer = "One Third";  
+        }
+        if(Math.max(firstclicks, secondclicks, thirdclicks, fourthclicks) == secondclicks){
+            Answer = "One Fifth";  
+        }
+        if(Math.max(firstclicks, secondclicks, thirdclicks, fourthclicks) == thirdclicks){
+            Answer = "One Tenth";  
+        }
+        if(Math.max(firstclicks, secondclicks, thirdclicks, fourthclicks) == fourthclicks){
+            Answer = "Three Quarters";  
+        }
+        document.getElementById("Answer").innerHTML = Answer;
+        }
+    function FindMax(){
+
+    }
     </script>
     </body>    
     <form id="form1" name="form1" method="GET" target="_blank">
@@ -95,6 +113,7 @@ footer {
         <p>One Fifth: <a id="Second">0</a></p>
         <p>One Tenth: <a id="Third">0</a></p>
         <p>Three Quarters: <a id="Fourth">0</a></p>
+        <p>Answer: <a id="Answer"></a></p>
     </footer>  
     </body>
     
