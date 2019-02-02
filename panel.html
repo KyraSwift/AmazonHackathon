@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Viewer Page</title>
+</head>
+<body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+    <div id="app" class="full-height"></div>
+    <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+    <!-- If you use any external libraries, such as jQuery, you must include
+      them as part of your extension.  Twitch does not allow extensions to link
+      to external libraries. -->
+    <script src="jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="viewer.js" type="text/javascript"></script>
+    
+        <form id="form1" name="form1" method="GET" target="_blank">
+            <div id="question">
+                Are you having fun?
+            </div>
+            <br />
+            <input type="radio" name="radio" id="yes" value="yes" />
+            <label for="yes"><strong>YES</strong></label>
+
+            <input type="radio" name="radio" id="maybe" value="maybe" />
+            <strong>
+                <label for="maybe">MAYBE</label>
+            </strong>
+
+            <input type="radio" name="radio" id="no" value="no" />
+            <strong>
+                <label for="no">NO</label>
+            </strong>
+
+            <input type="radio" name="radio" id="notsure" value="notsure" />
+            <strong>
+                <label for="notsure">NOT SURE</label>
+            </strong>
+            <br />
+            <input type="submit" id="vote" alt="Vote Now" onClick="writeText(this.form)" />
+        </form>
+    </body>
+</html>
+
