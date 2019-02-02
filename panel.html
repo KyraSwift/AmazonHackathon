@@ -1,37 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Viewer Page</title>
+    <title>The Challengers</title>
 </head>
-<body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+<style>
+    body {
+        background-image: url("castle.jpg");
+        background-size: 500px;
+    }
+
+h1 {
+  color:  white;
+  text-align:center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+footer {
+    color:  white;
+  text-align:center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+.button {
+  background-color: #89CFF0;
+  border: 4x;
+  color: white;
+  padding: 9px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: 3;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative;
+  left: 50px;
+}
+    </style>
+<h1>What proportion of the English population is estimated to have been killed by the Black Death in 1348-9?</h1>
+<body>
+    
     <div id="app" class="full-height"></div>
-	<h2>Are you having fun?</h2>
     <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
     <!-- If you use any external libraries, such as jQuery, you must include
       them as part of your extension.  Twitch does not allow extensions to link
       to external libraries. -->
     <script src="jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="viewer.js" type="text/javascript"></script>
-	<script type="text/javascript">
-    var yclicks = 0;
-    function onYesClick() {
-        yclicks += 1;
-        document.getElementById("yes").innerHTML = yclicks;
+    <script type="text/javascript">
+    var firstclicks = 0;
+    function onFirstClick() {
+        firstclicks += 1;
+        document.getElementById("First").innerHTML = firstclicks;
     };
     </script>
-	<button type="button" onClick="onYesClick()">YES!</button>
 	<script type="text/javascript">
-    var nclicks = 0;
-    function onNoClick() {
-        nclicks += 1;
-        document.getElementById("no").innerHTML = nclicks;
+    var secondclicks = 0;
+    function onSecondClick() {
+        secondclicks += 1;
+        document.getElementById("Second").innerHTML = secondclicks;
     };
     </script>
-    <button type="button" onClick="onNoClick()">No...</button>
+    <script type="text/javascript">
+    var thirdclicks = 0;
+        function onThirdClick() {
+            thirdclicks += 1;
+            document.getElementById("Third").innerHTML = thirdclicks;
+    };
+    </script>
+    <script type="text/javascript">
+    var fourthclicks = 0;
+        function onFourthClick() {
+            fourthclicks += 1;
+            document.getElementById("Fourth").innerHTML = fourthclicks;
+    };
+    </script>
+    </body>    
+    <form id="form1" name="form1" method="GET" target="_blank">
+        <div id="poll" style="text-align:center";>
+            </div>
+            <br />
+                <button class= "button" type="button" onClick="onFirstClick()">One Third</button>
+                <br>
+                <button class= "button" type="button" onClick="onSecondClick()">One Fifth</button>
+                <br>
+                <button class= "button" type="button" onClick="onThirdClick()">One Tenth</button>
+                <br>
+                <button class="button" type="button" onClick="onFourthClick()">Three Quarters</button>
+                <br>
+        </div>  
+    <footer>
+        <p>Poll Results:</p>
+        <p>One Third: <a id="First">0</a></p>
+        <p>One Fifth: <a id="Second">0</a></p>
+        <p>One Tenth: <a id="Third">0</a></p>
+        <p>Three Quarters: <a id="Fourth">0</a></p>
+    </footer>  
     </body>
-<footer>
-  <p>Poll Results:</p>
-  <p>Yes: <a id="yes">0</a></p>
-  <p>No: <a id="no">0</a></p>
-</footer>
+    
 </html>
