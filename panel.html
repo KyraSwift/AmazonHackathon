@@ -19,7 +19,7 @@ footer {
     color:  white;
   text-align:center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 20px;
+  font-size: 19px;
 }
 .button {
   background-color: #89CFF0;
@@ -37,7 +37,7 @@ footer {
   left: 50px;
 }
     </style>
-<h1>What proportion of the English population is estimated to have been killed by the Black Death in 1348-9?</h1>
+<h1>Which Adventure Do You Want To Experience?</h1>
 <body>
     
     <div id="app" class="full-height"></div>
@@ -76,16 +76,16 @@ footer {
     function CheckAnswer(){
         var Answer = "";
         if(Math.max(firstclicks, secondclicks, thirdclicks, fourthclicks) == firstclicks){
-            Answer = "One Third";  
+            Answer = "Medieval";  
         }
         if(Math.max(firstclicks, secondclicks, thirdclicks, fourthclicks) == secondclicks){
-            Answer = "One Fifth";  
+            Answer = "Futuristic";  
         }
         if(Math.max(firstclicks, secondclicks, thirdclicks, fourthclicks) == thirdclicks){
-            Answer = "One Tenth";  
+            Answer = "Apocalyptic";  
         }
         if(Math.max(firstclicks, secondclicks, thirdclicks, fourthclicks) == fourthclicks){
-            Answer = "Three Quarters";  
+            Answer = "Modern";  
         }
         document.getElementById("Answer").innerHTML = Answer;
         }
@@ -98,22 +98,22 @@ footer {
         <div id="poll" style="text-align:center";>
             </div>
             <br />
-                <button class= "button" type="button" onClick="onFirstClick()">One Third</button>
+                <button class= "button" type="button" onClick="onFirstClick()">Medieval</button>
                 <br>
-                <button class= "button" type="button" onClick="onSecondClick()">One Fifth</button>
+                <button class= "button" type="button" onClick="onSecondClick()">Futuristic</button>
                 <br>
-                <button class= "button" type="button" onClick="onThirdClick()">One Tenth</button>
+                <button class= "button" type="button" onClick="onThirdClick()">Apocalyptic</button>
                 <br>
-                <button class="button" type="button" onClick="onFourthClick()">Three Quarters</button>
+                <button class="button" type="button" onClick="onFourthClick()">Modern</button>
                 <br>
         </div>  
     <footer>
         <p>Poll Results:</p>
-        <p>One Third: <a id="First">0</a></p>
-        <p>One Fifth: <a id="Second">0</a></p>
-        <p>One Tenth: <a id="Third">0</a></p>
-        <p>Three Quarters: <a id="Fourth">0</a></p>
-        <p>Answer: <a id="Answer"></a></p>
+        <p>Medieval: <a id="First">0</a></p>
+        <p>Futuristic: <a id="Second">0</a></p>
+        <p>Apocalyptic: <a id="Third">0</a></p>
+        <p>Modern: <a id="Fourth">0</a></p>
+        <p>Voters Choice: <a id="Answer"></a></p>
     </footer>  
     </body>
     
